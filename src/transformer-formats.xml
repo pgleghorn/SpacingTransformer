@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformer-formats>
+  <transformer-format>
+    <name>Text Format</name> <!-- name of the output format supported by this repository -->
+    <mime-type>plain/text</mime-type>
+    <file-extension>txt</file-extension>
+    <transformer-options> <!-- number of possible transformer available for this tranformation -->
+	       <transformer>
+		          <name>TIKA</name>
+				  <properties>
+						<property>
+						<name>ClassName</name> <!-- name of the transformer class with gets loaded by tranformer factory -->
+						<!--  <value>com.fatwire.transformer.tika.DocumentTransformerImpl</value> -->
+						<value>com.oracle.support.SpacingTransformer</value>
+						</property>
+						<property>
+						<name>InputFile_Exts</name> <!-- allowed input file extentions..* means all file types supported by tika -->
+						<value>*</value>
+						</property>
+				  </properties>
+		    </transformer>
+    </transformer-options>
+  </transformer-format>
+</transformer-formats>
